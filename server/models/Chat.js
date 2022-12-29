@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose')
 
 const chatSchema = new Schema(
     {
@@ -14,13 +15,13 @@ const chatSchema = new Schema(
         },
         users: [
             {
-                type:mongoose.Schema.Types.ObjectId,
+                type: Schema.Types.ObjectId,
                 ref: "User",
             },
         ],
         latestMessage: [
             {
-            type:mongoose.Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref:"Message"
         }
     ],
